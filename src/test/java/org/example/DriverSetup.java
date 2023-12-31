@@ -16,6 +16,6 @@ public class DriverSetup {
 
     @AfterMethod
     public void quiteBrowser(){
-        browser.close();
+        browser.quit();
     }
 }

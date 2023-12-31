@@ -13,8 +13,27 @@ public class TestWebElement extends DriverSetup{
         System.out.println(header.getText());
 
         WebElement firstName = browser.findElement(By.id("fname"));
-        firstName.sendKeys("Hello World");
+        firstName.sendKeys("Mohammad");
+        Thread.sleep(1000);
+
+        WebElement lastName = browser.findElement(By.name("lname"));
+        lastName.sendKeys("Sumon");
+        Thread.sleep(1000);
+
+        browser.get("https://rahulshettyacademy.com/AutomationPractice/");
+        WebElement text = browser.findElement(By.className("ui-autocomplete-input"));
+        text.sendKeys("Class name");
+        Thread.sleep(1000);
+
+        WebElement linkText = browser.findElement(By.partialLinkText("Free Access to"));
+        System.out.println(linkText.getText());
         Thread.sleep(5000);
+
+        WebElement openTab = browser.findElement(By.linkText("Open Tab"));
+        openTab.click();
+        Thread.sleep(2000);
+
+
     }
 
 }
