@@ -36,7 +36,11 @@ public class TestWebElement extends DriverSetup{
 
         WebElement radioButton1 = browser.findElement(By.cssSelector("input[value='radio1']"));
         radioButton1.click();
-        Thread.sleep(5000);
+        Thread.sleep(1000);
+
+        WebElement selectDropdown = browser.findElement(By.xpath("//select[@id=\"dropdown-class-example\"]"));
+        selectDropdown.click();
+        Thread.sleep(1000);
 
 
 
