@@ -19,6 +19,7 @@ public class TestAdvanceWebElement extends DriverSetup{
 //        Thread.sleep(1000);
 
         System.out.println(browser.findElement(By.xpath("//div/h1")).getText());
+        System.out.println(browser.findElement(By.cssSelector("div > h1")).getText());
     }
 
 }
