@@ -11,6 +11,10 @@ public class ExampleTestNG {
     public void testCase1() {
         System.out.println("This is the A Normal Test Case 1");
     }
+    @Test(priority = 3)
+    public void testCase3() {
+        System.out.println("This is the A Normal Test Case 3");
+    }
     @BeforeMethod
     public void beforeMethod() {
         System.out.println("This will execute before every Method");
