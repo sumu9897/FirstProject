@@ -27,11 +27,18 @@ public class TestWebElement extends DriverSetup{
 
         WebElement linkText = browser.findElement(By.partialLinkText("Free Access to"));
         System.out.println(linkText.getText());
+        Thread.sleep(1000);
+
+//        WebElement openTab = browser.findElement(By.linkText("Open Tab"));
+//        openTab.click();
+//        Thread.sleep(2000);
+
+
+        WebElement radioButton1 = browser.findElement(By.cssSelector("input[value='radio1']"));
+        radioButton1.click();
         Thread.sleep(5000);
 
-        WebElement openTab = browser.findElement(By.linkText("Open Tab"));
-        openTab.click();
-        Thread.sleep(2000);
+
 
 
     }
