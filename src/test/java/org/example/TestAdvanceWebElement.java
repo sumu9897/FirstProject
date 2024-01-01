@@ -25,7 +25,8 @@ public class TestAdvanceWebElement extends DriverSetup{
         System.out.println(browser.findElement(By.cssSelector("a[class=\"button bar-item\" ][href=\"/\"]")).getText());
         System.out.println(browser.findElement(By.xpath("//button[starts-with(@onclick,\" window.open('http://google.com',\")]")).getText());
         System.out.println(browser.findElement(By.cssSelector("button[onclick^=\" window.open('http://google.com',\"]")).getText());
-
+        System.out.println(browser.findElement(By.xpath("//button[contains(@onclick,\"open('http://google.com',\")]")).getText());
+        System.out.println(browser.findElement(By.cssSelector("button[onclick*=\"open('http://google.com',\"]")).getText());
 
 
     }
