@@ -8,6 +8,11 @@ public class TestAdvanceWebElement extends DriverSetup{
 
     @Test
     public void TestElement() throws InterruptedException {
+
+        browser.get("https://rahulshettyacademy.com/AutomationPractice/");
+        WebElement text = browser.findElement(By.cssSelector(".ui-autocomplete-input"));
+        text.sendKeys("Class name");
+        Thread.sleep(1000);
         browser.get("https://trytestingthis.netlify.app/");
 
 //        WebElement radioButton1 = browser.findElement(By.cssSelector("input[value='radio1']"));
@@ -18,7 +23,11 @@ public class TestAdvanceWebElement extends DriverSetup{
 //        selectDropdown.click();
 //        Thread.sleep(1000);
         WebElement firstName = browser.findElement(By.cssSelector("#fname"));
-        firstName.sendKeys("Mohammad");
+        firstName.sendKeys("Mohammad css");
+        Thread.sleep(4000);
+        firstName.clear();
+        firstName = browser.findElement(By.xpath("//*[@id='fname']"));
+        firstName.sendKeys("Mohammad xpath");
         Thread.sleep(4000);
 
         System.out.println(browser.findElement(By.xpath("//div/h1")).getText());
@@ -36,6 +45,11 @@ public class TestAdvanceWebElement extends DriverSetup{
         System.out.println(browser.findElement(By.xpath("//tr /th[1]")).getText());
         System.out.println(browser.findElement(By.xpath("//tr /th[3]")).getText());
         System.out.println(browser.findElement(By.xpath("//tr /th[last()]")).getText());
+
+
+        System.out.println(browser.findElement(By.cssSelector("tr > th:first-child")).getText());
+        System.out.println(browser.findElement(By.cssSelector("tr > th:nth-child(3)")).getText());
+        System.out.println(browser.findElement(By.cssSelector("tr  > th:last-child")).getText());
 
 
 
