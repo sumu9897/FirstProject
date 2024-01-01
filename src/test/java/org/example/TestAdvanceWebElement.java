@@ -24,11 +24,11 @@ public class TestAdvanceWebElement extends DriverSetup{
 //        Thread.sleep(1000);
         WebElement firstName = browser.findElement(By.cssSelector("#fname"));
         firstName.sendKeys("Mohammad css");
-        Thread.sleep(4000);
+        Thread.sleep(500);
         firstName.clear();
         firstName = browser.findElement(By.xpath("//*[@id='fname']"));
         firstName.sendKeys("Mohammad xpath");
-        Thread.sleep(4000);
+        Thread.sleep(1000);
 
         System.out.println(browser.findElement(By.xpath("//div/h1")).getText());
         System.out.println(browser.findElement(By.cssSelector("div > h1")).getText());
@@ -50,6 +50,12 @@ public class TestAdvanceWebElement extends DriverSetup{
         System.out.println(browser.findElement(By.cssSelector("tr > th:first-child")).getText());
         System.out.println(browser.findElement(By.cssSelector("tr > th:nth-child(3)")).getText());
         System.out.println(browser.findElement(By.cssSelector("tr  > th:last-child")).getText());
+
+
+        System.out.println(browser.findElement(By.xpath("//td[text()=\"Personal Shopper\"]")).getText());
+        System.out.println(browser.findElement(By.xpath("//td[contains(text(),\"Personal Sh\")]")).getText());
+
+        System.out.println(browser.findElement(By.xpath("//td[contains(text(),\"Bong\")]/preceding-sibling::td")).getText());
 
 
 
