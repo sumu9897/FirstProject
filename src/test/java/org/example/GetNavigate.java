@@ -12,7 +12,7 @@ public class GetNavigate extends DriverSetup{
         browser.navigate().to ("https://rahulshettyacademy.com/AutomationPractice/");
         System.out.println(browser.getTitle());
         Thread.sleep(1500);
-//        browser.navigate().back();
+        browser.navigate().back();
 //        System.out.println(browser.getTitle());
 //        Thread.sleep(3000);
 //        browser.navigate().forward();
