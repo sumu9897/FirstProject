@@ -45,7 +45,7 @@ public class InteractingWithWebElement extends DriverSetup{
         System.out.println(displayed);
 
         browser.get("https://rahulshettyacademy.com/AutomationPractice/");
-        Boolean displayed = browser.findElement(By.xpath("//input[@id='displayed-text']")).isDisplayed();
+        displayed = browser.findElement(By.xpath("//input[@id='displayed-text']")).isDisplayed();
         System.out.println("Before clicking on the hide button:  " + displayed );
 
         browser.findElement(By.xpath("//input[@id='hide-textbox']")).click();
