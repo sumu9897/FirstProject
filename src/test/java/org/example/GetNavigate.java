@@ -59,12 +59,9 @@ public class GetNavigate extends DriverSetup{
         browser.findElement(By.id("openwindow")).click();
         Thread.sleep(1000);
         System.out.println(browser.getTitle());
-        System.out.println(browser.getWindowHandle());
         browser.findElement(By.id("opentab")).click();
         Thread.sleep(1000);
-
         System.out.println(browser.getTitle());
-        System.out.println(browser.getWindowHandle());
 
     }
 }
