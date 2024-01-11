@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GetNavigate extends DriverSetup{
     @Test
     public void testGetNav() throws InterruptedException {
@@ -61,6 +64,13 @@ public class GetNavigate extends DriverSetup{
         System.out.println(browser.getTitle());
         browser.findElement(By.id("opentab")).click();
         Thread.sleep(1000);
+        System.out.println(browser.getTitle());
+
+        List<String> browserWindowHandels =new ArrayList<>(browser.getWindowHandles()) ;
+        System.out.println(browserWindowHandels.get(0));
+        System.out.println(browserWindowHandels.get(1));
+        System.out.println(browserWindowHandels.get(2));
+        browser.switchTo().window(browserWindowHandels.get(1));
         System.out.println(browser.getTitle());
 
     }
