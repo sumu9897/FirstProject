@@ -72,6 +72,8 @@ public class GetNavigate extends DriverSetup{
         System.out.println(browserWindowHandels.get(2));
         browser.switchTo().window(browserWindowHandels.get(1));
         System.out.println(browser.getTitle());
+        browser.switchTo().window(browserWindowHandels.get(0));
+        System.out.println(browser.getTitle());
 
     }
 }
