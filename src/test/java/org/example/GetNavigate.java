@@ -54,20 +54,17 @@ public class GetNavigate extends DriverSetup{
     public void testBrowserWindowHandle() throws InterruptedException {
         browser.get("https://rahulshettyacademy.com/AutomationPractice/");
         System.out.println(browser.getTitle());
+        System.out.println(browser.getWindowHandle());
         Thread.sleep(1000);
         browser.findElement(By.id("openwindow")).click();
         Thread.sleep(1000);
         System.out.println(browser.getTitle());
-//        browser.switchTo().newWindow(WindowType.TAB);
-//        browser.navigate().to ("https://rahulshettyacademy.com/AutomationPractice/");
-//        System.out.println(browser.getTitle());
-//        Thread.sleep(1000);
-//        browser.switchTo().newWindow(WindowType.WINDOW);
-//        browser.navigate().to("https://facebook.com");
+        System.out.println(browser.getWindowHandle());
         browser.findElement(By.id("opentab")).click();
         Thread.sleep(1000);
 
         System.out.println(browser.getTitle());
+        System.out.println(browser.getWindowHandle());
 
     }
 }
