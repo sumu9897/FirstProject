@@ -1,5 +1,6 @@
 package org.example;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 
@@ -46,4 +47,27 @@ public class GetNavigate extends DriverSetup{
         browser.close();
         browser.quit();
   }
+
+
+
+    @Test
+    public void testBrowserWindowHandle() throws InterruptedException {
+        browser.get("https://rahulshettyacademy.com/AutomationPractice/");
+        System.out.println(browser.getTitle());
+        Thread.sleep(1000);
+        browser.findElement(By.id("openwindow")).click();
+        Thread.sleep(1000);
+        System.out.println(browser.getTitle());
+//        browser.switchTo().newWindow(WindowType.TAB);
+//        browser.navigate().to ("https://rahulshettyacademy.com/AutomationPractice/");
+//        System.out.println(browser.getTitle());
+//        Thread.sleep(1000);
+//        browser.switchTo().newWindow(WindowType.WINDOW);
+//        browser.navigate().to("https://facebook.com");
+        browser.findElement(By.id("opentab")).click();
+        Thread.sleep(1000);
+
+        System.out.println(browser.getTitle());
+
+    }
 }

@@ -61,4 +61,25 @@ public class TestAdvanceWebElement extends DriverSetup{
 
     }
 
+    @Test
+    public void testEX() throws InterruptedException {
+        browser.get("https://www.ebl.com.bd/");
+        browser.findElement(By.xpath("//i[@class='fa fa-times']")).click();
+        browser.findElement(By.xpath("//a[normalize-space()='Career']")).click();
+        Thread.sleep(5000);
+
+    }
+
+    @Test
+    public  void eblTG() throws InterruptedException {
+        browser.get("https://ebl.com.bd/treasury/government-securities-investment-window");
+        browser.findElement(By.xpath("(//tbody/tr)[6]/td[4]")).click();
+        System.out.println( browser.findElement(By.xpath("(//tbody/tr)[6]/td[4]")).getText());
+        browser.findElement(By.xpath("(//tbody/tr)[4]/td[6]")).click();
+        System.out.println( browser.findElement(By.xpath("(//tbody/tr)[4]/td[6]")).getText());
+
+        Thread.sleep(2000);
+
+    }
+
 }
