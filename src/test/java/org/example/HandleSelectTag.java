@@ -21,6 +21,9 @@ public class HandleSelectTag extends DriverSetup{
         select.selectByValue("option 3");
         System.out.println(select.getFirstSelectedOption().getText());
         Thread.sleep(2000);
+        select.selectByVisibleText("Option 1");
+        System.out.println(select.getFirstSelectedOption().getText());
+        Thread.sleep(2000);
 
 
 
