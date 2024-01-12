@@ -13,8 +13,24 @@ public class HandelAlert extends DriverSetup{
         browser.findElement(By.xpath("//button[@onclick='jsAlert()']")).click();
         Alert alert = browser.switchTo().alert();
         System.out.println(alert.getText());
+        alert.accept();
 
-       // Assert.assertEquals(browser.findElement(By.xpath("//p[@id='result']")).getText("You successfully clicked an alert"));
-        Thread.sleep(2000);
+       Assert.assertEquals(browser.findElement(By.xpath("//p[@id='result']")).getText(),"You successfully clicked an alert");
+//       Thread.sleep(2000);
+
+        browser.findElement(By.xpath("//button[@onclick='jsConfirm()']")).click();
+        alert = browser.switchTo().alert();
+        System.out.println(alert.getText());
+        alert.accept();
+
+        Assert.assertEquals(browser.findElement(By.xpath("//p[@id='result']")).getText(),"You clicked: Ok");
+
+        browser.findElement(By.xpath("button[@onclick='jsConfirm()']")).click();
+        alert = browser.switchTo().alert();
+        System.out.println(alert.getText());
+        alert.dismiss();
+
+        Assert.assertEquals(browser.findElement(By.xpath("//p[@id='result']")).getText(),"You clicked: Cancel");
+
     }
 }
