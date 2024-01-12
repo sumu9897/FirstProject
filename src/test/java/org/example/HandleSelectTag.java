@@ -13,8 +13,13 @@ public class HandleSelectTag extends DriverSetup{
 
         WebElement dropdown = browser.findElement(By.id("option"));
         Select select = new Select(dropdown);
-        select.selectByValue("option 1");
+        dropdown.click();
         Thread.sleep(2000);
+        select.selectByIndex(2);
+        System.out.println(select.getFirstSelectedOption().getText());
+        Thread.sleep(2000);
+        //select.selectByValue("option 1");
+
 
 
     }
