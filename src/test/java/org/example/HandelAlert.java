@@ -25,7 +25,7 @@ public class HandelAlert extends DriverSetup{
 
         Assert.assertEquals(browser.findElement(By.xpath("//p[@id='result']")).getText(),"You clicked: Ok");
 
-        browser.findElement(By.xpath("button[@onclick='jsConfirm()']")).click();
+        browser.findElement(By.xpath("//button[@onclick='jsConfirm()']")).click();
         alert = browser.switchTo().alert();
         System.out.println(alert.getText());
         alert.dismiss();
