@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class HandelAlert extends DriverSetup{
+public class HandleAlert extends DriverSetup{
 
     @Test
     public void test_different_alert() throws InterruptedException {

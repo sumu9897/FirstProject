@@ -14,6 +14,7 @@ public class HandleSelectTag extends DriverSetup{
         WebElement dropdown = browser.findElement(By.id("option"));
         Select select = new Select(dropdown);
         dropdown.click();
+
         Thread.sleep(2000);
         select.selectByIndex(2);
         System.out.println(select.getFirstSelectedOption().getText());
