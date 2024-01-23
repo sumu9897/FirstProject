@@ -16,6 +16,8 @@ public class TestHoverAction extends DriverSetup{
         Actions actions = new Actions(browser);
         actions.clickAndHold(manu2).build().perform();
         Thread.sleep(5000);
+        actions.clickAndHold(browser.findElement(By.linkText("SUB SUB LIST »"))).clickAndHold().build().perform();
+        Thread.sleep(5000);
 //        browser.get("https://rahulshettyacademy.com/AutomationPractice/");
 //
 ////        WebElement mousehover = browser.findElement(By.xpath("//div[@class='mouse-hover']"));
