@@ -26,17 +26,17 @@ public class TestHoverAction extends DriverSetup{
         Thread.sleep(1000);
 //        actions.scrollToElement(browser.findElement(By.xpath("//legend[text()='Mouse Hover Example']"))).build().perform();
 //        WebElement hoverButton = browser.findElement(By.xpath("//*[text()='Mouse Hover']"));
-        actions.clickAndHold(browser.findElement(By.xpath("//*[@id='mousehover']"))).build().perform();
+        actions1.clickAndHold(browser.findElement(By.xpath("//*[@id='mousehover']"))).build().perform();
         Thread.sleep(1000);
-        actions.click(browser.findElement(By.linkText("Top"))).build().perform();
+        actions1.click(browser.findElement(By.linkText("Top"))).build().perform();
         Thread.sleep(1000);
 
-        actions.sendKeys(browser.findElement(By.id("autocomplete")), "Hello").build().perform();
-        actions.keyDown(Keys.COMMAND);
-        actions.sendKeys("a");
-        actions.keyUp(Keys.COMMAND);
-        actions.build().perform();
-        actions.keyDown(Keys.COMMAND).sendKeys("c").keyUp(Keys.COMMAND).build().perform();
+        actions1.sendKeys(browser.findElement(By.id("autocomplete")), "Hello").build().perform();
+        actions1.keyDown(Keys.COMMAND);
+        actions1.sendKeys("a");
+        actions1.keyUp(Keys.COMMAND);
+        actions1.build().perform();
+        actions1.keyDown(Keys.COMMAND).sendKeys("c").keyUp(Keys.COMMAND).build().perform();
         browser.findElement(By.id("name")).sendKeys(Keys.COMMAND, "v");
         Thread.sleep(5000);
 
