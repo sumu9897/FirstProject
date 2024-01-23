@@ -24,21 +24,21 @@ public class TestHoverAction extends DriverSetup{
         Actions actions1 = new Actions(browser);
         actions1.scrollByAmount(0, 1000);
         Thread.sleep(1000);
-////        actions.scrollToElement(browser.findElement(By.xpath("//legend[text()='Mouse Hover Example']"))).build().perform();
-////        WebElement hoverButton = browser.findElement(By.xpath("//*[text()='Mouse Hover']"));
-//        actions.clickAndHold(browser.findElement(By.xpath("//*[@id='mousehover']"))).build().perform();
-//        Thread.sleep(1000);
-//        actions.click(browser.findElement(By.linkText("Top"))).build().perform();
-//        Thread.sleep(1000);
-//
-//        actions.sendKeys(browser.findElement(By.id("autocomplete")), "Hello").build().perform();
-//        actions.keyDown(Keys.COMMAND);
-//        actions.sendKeys("a");
-//        actions.keyUp(Keys.COMMAND);
-//        actions.build().perform();
-//        actions.keyDown(Keys.COMMAND).sendKeys("c").keyUp(Keys.COMMAND).build().perform();
-//        browser.findElement(By.id("name")).sendKeys(Keys.COMMAND, "v");
-//        Thread.sleep(5000);
+//        actions.scrollToElement(browser.findElement(By.xpath("//legend[text()='Mouse Hover Example']"))).build().perform();
+//        WebElement hoverButton = browser.findElement(By.xpath("//*[text()='Mouse Hover']"));
+        actions.clickAndHold(browser.findElement(By.xpath("//*[@id='mousehover']"))).build().perform();
+        Thread.sleep(1000);
+        actions.click(browser.findElement(By.linkText("Top"))).build().perform();
+        Thread.sleep(1000);
+
+        actions.sendKeys(browser.findElement(By.id("autocomplete")), "Hello").build().perform();
+        actions.keyDown(Keys.COMMAND);
+        actions.sendKeys("a");
+        actions.keyUp(Keys.COMMAND);
+        actions.build().perform();
+        actions.keyDown(Keys.COMMAND).sendKeys("c").keyUp(Keys.COMMAND).build().perform();
+        browser.findElement(By.id("name")).sendKeys(Keys.COMMAND, "v");
+        Thread.sleep(5000);
 
     }
 }
