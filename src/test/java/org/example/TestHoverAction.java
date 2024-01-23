@@ -18,13 +18,12 @@ public class TestHoverAction extends DriverSetup{
         Thread.sleep(5000);
         actions.clickAndHold(browser.findElement(By.linkText("SUB SUB LIST »"))).clickAndHold().build().perform();
         Thread.sleep(5000);
-//        browser.get("https://rahulshettyacademy.com/AutomationPractice/");
-//
-////        WebElement mousehover = browser.findElement(By.xpath("//div[@class='mouse-hover']"));
-//
-//        Actions actions = new Actions(browser);
-//        actions.scrollByAmount(0, 1000);
-//        Thread.sleep(1000);
+        browser.get("https://rahulshettyacademy.com/AutomationPractice/");
+        WebElement mousehover = browser.findElement(By.xpath("//div[@class='mouse-hover']"));
+
+        Actions actions1 = new Actions(browser);
+        actions1.scrollByAmount(0, 1000);
+        Thread.sleep(1000);
 ////        actions.scrollToElement(browser.findElement(By.xpath("//legend[text()='Mouse Hover Example']"))).build().perform();
 ////        WebElement hoverButton = browser.findElement(By.xpath("//*[text()='Mouse Hover']"));
 //        actions.clickAndHold(browser.findElement(By.xpath("//*[@id='mousehover']"))).build().perform();
